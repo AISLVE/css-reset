@@ -14,6 +14,7 @@ html {
 
 * {
   font: inherit; /* Resets font sizes and font weights */
+  font-size: 100%;
 }
 
 img, 
@@ -26,6 +27,11 @@ video {
 
 body {
   min-height: 100dvh, 100vh;
+  font-family: sans-serif;
+}
+
+ol,ul,li {
+  list-style: none
 }
 
 .grid {
@@ -40,3 +46,38 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* A way to center an item with position absolute or something like that on it */
+
+.center-absolute {
+  inset: 0;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.relative {
+  position: relative
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.inset0 {
+  inset: 0;
+}
+
