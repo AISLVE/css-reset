@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 html {
   color-scheme: dark light; /* Adds a default dark mode to your website */
 }
@@ -17,6 +19,16 @@ html {
   font-size: 100%;
 }
 
+/* For debugging purpose in case of an overflow or something like that */
+
+/*
+
+  * {
+    background-color: hsla(150, 100%, 50%, 0.2)
+  }
+
+*/
+
 img, 
 picture,
 svg,
@@ -25,13 +37,21 @@ video {
   max-width: 100%;
 }
 
-body {
-  min-height: 100dvh, 100vh;
-  font-family: sans-serif;
+img {
+  object-fit: cover /* Fixes the problem of stretching for images with fixed dimensions */
 }
 
-ol,ul,li {
-  list-style: none
+body {
+  min-height: 100dvh, 100vh;
+  font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .grid {
@@ -42,23 +62,21 @@ ol,ul,li {
   display: flex;
 }
 
-.center {
+.center-items {
   align-items: center;
   justify-content: center;
 }
 
 /* A way to center an item with position absolute or something like that on it */
+/* BTW, if you do not know what inset is, it is a shorthand for top, bottom, left and right position properties */
 
-.center-absolute {
+.center-position {
   inset: 0;
   margin: auto;
 }
 
-button {
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  border: 0;
+.static {
+  position: statuc;
 }
 
 .relative {
@@ -80,4 +98,3 @@ button {
 .inset0 {
   inset: 0;
 }
-
