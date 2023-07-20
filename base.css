@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
-  color-scheme: dark light; /* Adds a default dark mode to your website */
+  color-scheme: dark light; 
   scroll-behavior: smooth;
 }
 
@@ -18,16 +18,14 @@ html {
 * {
   font: inherit; /* Resets font sizes and font weights */
   font-size: 100%;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
-/* For debugging purpose in case of an overflow or something like that */
-
-/*
+/* For debugging purpose in case of an overflow or something like that 
 
   * {
     background-color: hsla(150, 100%, 50%, 0.2)
-  }
+  } 
 
 */
 
@@ -63,7 +61,11 @@ button {
 ol,
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+/* ************************************** UTILITY CLASSES ********************************************* */
 
 .grid {
   display: grid;
@@ -77,9 +79,6 @@ ul {
   align-items: center;
   justify-content: center;
 }
-
-/* A way to center an item with position absolute or something like that on it */
-/* BTW, if you do not know what inset is, it is a shorthand for top, bottom, left and right position properties */
 
 .center-position {
   inset: 0;
@@ -108,4 +107,16 @@ ul {
 
 .inset0 {
   inset: 0;
+}
+
+.sr-only {  /* For screen readers only utility class */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
